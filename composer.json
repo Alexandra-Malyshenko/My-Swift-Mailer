@@ -15,5 +15,6 @@
     "require": {
         "swiftmailer/swiftmailer": "^6.0",
         "vlucas/phpdotenv": "^5.3"
-    }
+    },
+    "description": ""
 }
