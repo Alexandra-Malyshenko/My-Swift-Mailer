@@ -26,10 +26,11 @@ class MailTransport implements TransportInterface
     public function send(Message $message): bool
     {
         return $this->mailer->send(
+
                 (new \Swift_Message($message->getTitle()))
                 ->setFrom(['MOPOP@doe.com' => 'Mopop Administration'])
                 ->setTo($message->getEmail())
-                ->setBody($message->getBody())
+                ->setBody($message->getBody(), 'text/html')
         ) !== 0 ;
     }
 }
